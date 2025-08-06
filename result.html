@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diet Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            color: #555;
+        }
+        .section p {
+            color: #777;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-link:hover {
+            background-color: #45a049;
+        }
+
+        .nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.nutrition-table th, .nutrition-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.nutrition-table th {
+    background-color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+    <h2>Your Personalized Diet Plan</h2>
+    <div class="content">
+        <div class="section">
+            <h3>Food Recommendation:</h3>
+            <p><strong>{{ food }}</strong></p>
+        </div>
+        <div class="section">
+            <h3>Recipe:</h3>
+            <p>{{ recipe }}</p>
+        </div>
+        <div class="section">
+            <h3>Fitness Tip:</h3>
+            <p>{{ fitness }}</p>
+        </div>
+        {% if user_meal_timing %}
+        <p><strong>Meal Timings:</strong></p>
+        <ul>
+            <li>Breakfast: {{ user_meal_timing['Breakfast'] }}</li>
+            <li>Lunch: {{ user_meal_timing['Lunch'] }}</li>
+            <li>Snacks: {{ user_meal_timing['Snacks'] }}</li>
+            <li>Dinner: {{ user_meal_timing['Dinner'] }}</li>
+        </ul>
+        {% else %}
+        <p>Meal timing info not available.</p>
+        {% endif %}
+
+
+        {% if nutrition %}
+        <div class="section">
+            <h3>Nutrition Facts 📊</h3>
+            <table class="nutrition-table">
+                <tr>
+                    <th>Food</th>
+                    <th>Calories</th>
+                    <th>Proteins (g)</th>
+                    <th>Fats (g)</th>
+                    <th>Carbohydrates (g)</th>
+                    <th>Fiber (g)</th>
+                </tr>
+                <!DOCTYPE html>
+<html>
+<head>
+    <title>Diet Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            color: #555;
+        }
+        .section p {
+            color: #777;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-link:hover {
+            background-color: #45a049;
+        }
+
+        .nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.nutrition-table th, .nutrition-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.nutrition-table th {
+    background-color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+    <h2>Your Personalized Diet Plan</h2>
+    <div class="content">
+        <div class="section">
+            <h3>Food Recommendation:</h3>
+            <p><strong>{{ food }}</strong></p>
+        </div>
+        <div class="section">
+            <h3>Recipe:</h3>
+            <p>{{ recipe }}</p>
+        </div>
+        <div class="section">
+            <h3>Fitness Tip:</h3>
+            <p>{{ fitness }}</p>
+        </div>
+        {% if user_meal_timing %}
+        <p><strong>Meal Timings:</strong></p>
+        <ul>
+            <li>Breakfast: {{ user_meal_timing['Breakfast'] }}</li>
+            <li>Lunch: {{ user_meal_timing['Lunch'] }}</li>
+            <li>Snacks: {{ user_meal_timing['Snacks'] }}</li>
+            <li>Dinner: {{ user_meal_timing['Dinner'] }}</li>
+        </ul>
+        {% else %}
+        <p>Meal timing info not available.</p>
+        {% endif %}
+
+
+        {% if nutrition %}
+        <div class="section">
+            <h3>Nutrition Facts 📊</h3>
+            <table class="nutrition-table">
+                <tr>
+                    <th>Food</th>
+                    <th>Calories</th>
+                    <th>Proteins (g)</th>
+                    <th>Fats (g)</th>
+                    <th>Carbohydrates (g)</th>
+                    <th>Fiber (g)</th>
+                </tr>
+                <tr>
+                    <td>{{ nutrition['Food'] }}</td>
+                    <td>{{ nutrition['Calories'] }}</td>
+                    <td>{{ nutrition['Proteins'] }}</td>
+                    <td>{{ nutrition['Fats'] }}</td>
+                    <td>{{ nutrition['Carbohydrates'] }}</td>
+                    <td>{{ nutrition['Fiber'] }}</td>
+                </tr>
+            </table>
+        </div>
+        {% endif %}
+
+        
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
+
+                
+            </table>
+        </div>
+        {% endif %}
+
+        
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
